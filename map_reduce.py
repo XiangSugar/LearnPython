@@ -18,4 +18,24 @@ L1 = list(map(str, [1,2,3,4,5,6,7,8,9]))
 print(L1)
 
 #-------------------------------------
+#reduce(f, [x1,x2,x3,x4]) = f(f(f(x1, x2), x3), x4)
+
+#--------------------------------------
+from functools import reduce
+def add(x,y):
+    return x + y
+
+reduce(add, [1,3,5,7,9])
+
+#---------------------------------------
+from functools import reduce
+def fn(x,y):
+    return 10 * x + y
+
+reduce(fn,[1,3,5,7,9])
+
+#---------------------------------------
+
+
+
 
