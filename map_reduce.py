@@ -59,7 +59,11 @@ def str2int(s):
     return reduce(fn, map(char2num, s))
 
 #-------------------------------------------
+from functools import reduce
+def prod(L):
+    def fx(x, y):
+        return x * y
+    return reduce(fx, L)
 
-
-
+#--------------------------------------------
 
