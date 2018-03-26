@@ -19,5 +19,5 @@ else:
         if Volunteer.count != 2:
             print('测试失败！')
         else:
-            print('Vplunteer: ', Volunteer.count)
-            print('测试通过！')
+            print('Volunteer: ', Volunteer.count)
+            print("测试成功！")
