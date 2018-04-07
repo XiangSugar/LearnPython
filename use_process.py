@@ -15,3 +15,6 @@ if __name__=='__main__':
     p.start()
     p.join()
     print('Child process end.')
+
+# 在调试台中运行，得到的结果和网站上面给出的不一样
+# 不过在 cmd 终端上运行 .py 文件，则能够得到一致的结果
