@@ -24,7 +24,7 @@ if __name__=='__main__':
 
     p.close()
     # Pool 对象调用 join() 方法会等待所有子进程执行完毕
-    # 调用 join() 之前要先调用 close()
+    # 用Pool创建大量子进程时，调用 join() 之前要先调用 close()
     # 调用 close() 之后就不能继续添加 Process 了
     p.join()
     print('All subprocesses done.')
