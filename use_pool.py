@@ -16,7 +16,7 @@ def long_time_task(name):
 if __name__=='__main__':
     print('Parent process %s.' % os.getpid())
 
-    # 最多同时执行几个进程
+    # 最多同时执行几个进程(要跟据计算机实际的核心数来定)
     p = Pool(4)
     for i in range(5):
         p.apply_async(long_time_task, args=(i,))  # 这里是一个 tuple 
