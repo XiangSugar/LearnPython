@@ -2,9 +2,10 @@
 
 import rsa
 
-key        = rsa.newkeys(2048)#生成随机秘钥
+key        = rsa.newkeys(1024)#生成随机秘钥
 privateKey = key[1]#私钥
 publicKey  = key[0]#公钥
+n = privateKey.n
 message    = 'sanxi Now is better than never.'
 print('Before encrypted:',message)
 
