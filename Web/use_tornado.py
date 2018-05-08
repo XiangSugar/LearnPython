@@ -25,7 +25,7 @@ class IndexHandler(tornado.web.RequestHandler):
 if __name__ == "__main__":
     # 从命令行中读取并解析配置参数
     tornado.options.parse_command_line()
-    # 创建一个tornado应用。andlers 是一个元组列表，其中每个元组的第一个元素是一个正则表达式，
+    # 创建一个tornado应用。handlers 是一个元组列表，其中每个元组的第一个元素是一个正则表达式，
     # 表示网址路由，如果其中包含捕获分组，则将匹配的内容送往 RequestHandler；
     # 第二个元素是所使用的 RequestHandler 类用来响应操作
     app = tornado.web.Application(handlers=[(r"/", IndexHandler)])
