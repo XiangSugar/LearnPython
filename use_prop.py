@@ -17,6 +17,36 @@ class Student(object):
 
 s = Student()
 s.score = 66  # 实际转化为s.set_score(60)
-print(s.score)
+print(s.score)  # 实际转化为 s.get_score()
 
-s.score = 999
+s.score = 999  # error
+
+# --------------------------------------------------------------
+class Screen(object):
+    
+    @property
+    def width(self):
+        return self.__width
+    @width.setter
+    def width(self, value):
+        if not isinstance(value, int):
+            raise ValueError('width must be integer!')
+        if not 10 <= value <= 100:
+            raise ValueError('width must between 10~100 !')
+        self._width = value
+        
+    @property
+    def height(self):
+        return self.__height
+    @height.setter
+    def height(self, value):
+        if not isinstance(value, int):
+            raise ValueError('height must be integer!')
+        if not 10 <= value <= 100:
+            raise ValueError('height must between 10~100 !')
+        self._height = value
+        
+    @property
+    def resolution(self):
+        return self._resolution
+# -------------------------------------------------------------
